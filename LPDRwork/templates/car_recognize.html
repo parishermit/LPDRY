@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>"I'm not company's slaves!"</title>
+</head>
+
+<style>
+    p{
+        color: rgb(0, 255, 0);
+    }
+   .container {
+
+  width: 2800px;
+       height: 300px;
+  border-bottom: 50px solid rgb(0, 255, 0);
+       position: relative;
+    left: 480px;
+    top: 250px;
+}
+h1{
+    font-size: 10em;
+    color: white;
+    position: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.box {
+  text-align: center;
+  padding: 10px;
+  /*border: 1px solid #333333;*/
+  border-right-width: 20px;
+}
+    body{
+        background: url(../static/images/pexels-tirachard-kumtanom-450055.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: auto;
+        background-size: cover;
+
+    }
+    p{
+        font-size: 5em;
+    color: white;
+    position: relative;
+        left:30px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    }
+    span{
+        font-size: 2em;
+    color: white;
+    position: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+        display:block;
+        float: right;
+        margin-left: 40px;
+        margin-right: 40px;
+
+    }
+    .nav a {
+        display: inline-block;
+        height: 80px;
+        font-size: 50px;
+         text-decoration: none;
+        padding: 0 50px;
+        color: white;
+          border-bottom: 5px solid rgb(0, 255, 0);
+    }
+    .nav a:hover{
+        background-color: chartreuse;
+    }
+</style>
+
+<body>
+
+<div class="nav">
+    <a href="/group/introduction" target="_self">关于我们</a>
+    <span><a href="/video/search" target="_self">视频查找车辆</a></span>
+     <span><a href="/image/search" target="_self">图片查找车辆</a></span>
+{#   <span><a href="/number/search" target="_self">查找车牌</a></span>#}
+    <span><a href="/mysql" target="_self">数据库</a></span>
+</div>
+
+<p>"欢迎来到小组‘我不是社畜’的车牌识别网站!"</p>
+
+<div class="container">
+    <div class="box"><h1>追影——基于机器学习的动态车牌识别</h1></div>
+</div>
+
+</body>
+
+<!--{#<script>#}-->
+<!--{#window.setTimeout(function () {#}-->
+<!--{#    location.href = "{{ redirect_url }}";#}-->
+<!--{#      }, 5000);#}-->
+<!--{#</script>#}-->
+
+</html>

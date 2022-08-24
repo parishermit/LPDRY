@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mysql</title>
+   <link rel="stylesheet" type="text/css" href="search.css">
+</head>
+<style>
+
+     body{
+        background: url(../static/images/pexels-henry-&-co-2341290.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+     .tb{
+       color: dimgray;
+        font-size: 60px;
+        border-color: wheat;
+         position: relative;
+         left: 40px;
+         top: 800px;
+    }
+
+      .nav a{
+        display: inline-block;
+        height: 80px;
+        font-size: 50px;
+         text-decoration: none;
+        padding: 0 50px;
+        color: dimgray;
+          border: #555555;
+
+    }
+    .nav a:hover{
+        background-color: rgb(255,140,0);
+    }
+</style>
+<body>
+<div class="nav">
+    <a href="/">回到主页</a>
+    <a href="/video/search">查看视频</a>
+</div>
+
+<style>
+        .searchBox{
+            transition: 2s;
+    position: relative;
+    /*{#left: 150px;#}*/
+            top: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        .searchBox input:hover{
+            width: 1000px;
+        }
+        .searchBox input{
+            font-size: 50px;
+            font-family: Consolas;
+            width: 180px;
+            height: 120px;
+            border: none;
+            padding: 10px 25px;
+            outline: none;
+            color: #555;
+            background: linear-gradient(#dbdae1, #a3aaba);
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.1),
+            15px 15px 15px rgba(0,0,0,0.1),
+            20px 20px 15px rgba(0,0,0,0.1),
+            30px 30px 15px rgba(0,0,0,0.1),
+            inset 1px 1px 2px #fff;
+        }
+
+    ion-icon{
+        position: absolute;
+        right: 20px;
+        color: #555555;
+
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+</style>
+<div class="searchBox">
+    <div class="shadow"></div>
+    <input type="text" placeholder="Search Anything You Want!">
+
+</div>
+
+<table align="center" width="2500" height="100" border="1" cellspacing="0" class="tb">
+    <tr>
+        <th>视频名称</th>
+        <th>出现的车牌号</th>
+        <th>出现的时间</th>
+    </tr>
+    <tbody id="tableText">
+
+    </tbody>
+</table>
+
+</script>
+
+</body>
+</html>

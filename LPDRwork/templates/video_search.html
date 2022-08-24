@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>car_search</title>
+</head>
+
+<style>
+     body{
+        background: url(../static/images/pexels-dexter-fernandes-2646237.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+  .nav a{
+        display: inline-block;
+        height: 80px;
+        font-size: 50px;
+         text-decoration: none;
+        padding: 0 50px;
+        color: white;
+      border-bottom: 50px;
+    }
+    .nav a:hover{
+        background-color: chartreuse;
+    }
+    .tb{
+        color: white;
+        font-size: 60px;
+        border-color: chartreuse;
+    }
+    .vp{
+        position: relative;
+        left: 620px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .bt{
+        size: auto;
+        font-size: 60px;
+    }
+    .tx{
+        font-size: 50px;
+        position: relative;
+        left: 650px;
+        border-top: 50px;
+        /*color: white;*/
+    }
+    .data_{
+        font-size: 50px;
+        font-color: gray;
+    }
+</style>
+
+<body>
+
+<div class="nav">
+           <a href="/take/poto">打开摄像头</a>
+<!--{#    <a href="#">输入车牌号</a>#}-->
+    <a href="/mysql" target="_self">查看数据库</a>
+    <a href="/" target="_self">回到主页</a><br>
+
+ <div ><video class="vp" controls src="{{ url_for('static',filename='upload/'+videoname) }}" width="2500px" height="1380px"/></div>
+    <div>
+        <form class="tx" method="post" enctype="multipart/form-data" action="/video/search">
+            <input type="file" class="tx" id="uploadfile" name="uploadfile" required placeholder="选择上传文件"/>
+            <input type="submit" value="上传" class="tx">
+        </form>
+
+</div>
+
+<table id="tableText" align="center" width="2500" height="100" border="1" cellspacing="0" class="tb">
+    <tr>
+        <td>视频名称</td>
+        <td>出现的车牌号</td>
+        <td>出现的时间</td>
+    </tr>
+    <tbody>
+    {%for list in car_id_list%}
+    <tr class="data_">-->
+        <td>{{list[0]}} </td>
+        <td>{{list[1]}} </td>
+        <td>{{list[2]}} </td>
+    </tr>
+    {%endfor%}
+    </tbody>
+</table>
+
+</body>
+</html>
+
+

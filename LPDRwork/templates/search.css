@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body{
+    display: flex;
+justify-content: center;
+    align-items: center;
+}
+.searchBox{
+    position: relative;
+    left: 400px;
+    top: 500px;
+    width: 400px;
+    height: 50px;
+    display: flex;
+justify-content: center;
+    align-items: center;
+}

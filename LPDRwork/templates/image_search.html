@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car_search</title>
+
+</head>
+
+<style>
+     body{
+        background: url(../static/images/pexels-phil-kallahar-983200.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+  .nav a{
+        display: inline-block;
+        height: 80px;
+        font-size: 50px;
+         text-decoration: none;
+        padding: 0 50px;
+        color: white;
+      border-bottom: 50px;
+      border-top: 100px;
+    }
+    .nav a:hover{
+        background-color: chartreuse;
+    }
+    .tb{
+        color: white;
+        font-size: 60px;
+        border-color: chartreuse;
+    }
+    .vp{
+        position: relative;
+        left: 620px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .bt{
+        size: auto;
+        font-size: 60px;
+    }
+    .tx{
+        font-size: 50px;
+        position: relative;
+        left: 1300px;
+    }
+</style>
+
+<body>
+<div class="nav">
+     <a href="/mysql" target="_self">打开摄像头</a>
+    <a href="/mysql" target="_self">查看数据库</a>
+    <a href="/" target="_self">回到主页</a><br>
+<!--{#    <a class="bt" onclick="play()">上传视频</a>#}-->
+
+<!--{#    <input type="file" opacity: 0; accept="vedio/*" value="上传视频" onclick="play()" class="bt">#}-->
+    <div ><img class="vp" src="{{ url_for('static',filename='upload/'+imagename) }}" width="2500px" height="1380px"/></div>
+    <div >
+        <form method="post" enctype="multipart/form-data" action="/image/search">
+            <input type="file" class="tx" id="uploadfile" name="uploadfile" required placeholder="选择上传文件"/>
+            <input type="submit" class="tx" value="上传">
+        </form>
+
+<script>
+
+</script>
+<!--    <span class="tx">上传图片:</span>-->
+<!--    <input id="myIfile" type="file" accept="image/*" onchange="loadIfile()" class="bt">-->
+<!--    <div id="Icontent" ></div>-->
+<!--    -->
+<!--    </script>-->
+<!--<script>-->
+<!--    var myIfile=document.getElementById('myIfile');-->
+<!--    var fIReader=new FileReader();-->
+<!--    var con=document.getElementById('Icontent');-->
+
+<!--    fIReader.onload=function (e){-->
+<!--        var str='<img width="2500" height="1336" class="vp" src="'+e.target.result+'">';-->
+<!--        con.innerHTML+= str;-->
+<!--    }-->
+<!--    function loadIfile(){-->
+<!--        fIReader.readAsDataURL(myIfile.files[0]);-->
+<!--    }-->
+<!--</script>-->
+<!--{#    <input type="file" class="bt" id="upfile" value="上传文件"/>#}-->
+<!--{#<input type="button" class="bt" value="上传" onclick="upfile()"/>#}-->
+<!--{#<div id="img"></div>#}-->
+<!--{##}-->
+<!--{#<script type="text/javascript">#}-->
+<!--{#    $(function () {#}-->
+<!--{##}-->
+<!--{#    })#}-->
+<!--{##}-->
+<!--{#    function upfile() {#}-->
+<!--{#        var formdata = new FormData();#}-->
+<!--{#        formdata.append("file", $("#upfile")[0].files[0]);#}-->
+<!--{#        $.ajax({#}-->
+<!--{#            url: "/static/images",#}-->
+<!--{#            data: formdata,#}-->
+<!--{#            type: "post",#}-->
+<!--{#            contentType: false,#}-->
+<!--{#            processData: false,#}-->
+<!--{#            success: function (obj) {#}-->
+<!--{#                alert(obj);#}-->
+<!--{#                $("#img").empty();#}-->
+<!--{#                $("#img").append("<video src=" + obj + "class='tx'></video>");#}-->
+<!--{#            }#}-->
+<!--{#        })#}-->
+<!--{#    }#}-->
+<!--{#</script>#}-->
+
+<!--{#    <script>#}-->
+<!--{#// 引入上传图片接口#}-->
+<!--{#import { uploadImage } from 'video(1).py/loginRegApi'#}-->
+<!--{#export default {#}-->
+<!--{#methods: {#}-->
+<!--{#onFile () {#}-->
+<!--{#// 获取到上传的文件#}-->
+<!--{#var myFile = document.getElementById('myVfile').files[0];#}-->
+<!--{#console.log(myFile);#}-->
+<!--{#// 获取到文件不能直接传给后端#}-->
+<!--{#// 利用formData传给后端#}-->
+<!--{#var formData = new FormData();#}-->
+<!--{#formData.append('video_path',myFile); // 'video_p'要和后端接口需要的参数名一致#}-->
+<!--{#// 上传图片接口#}-->
+<!--{#uploadImage(formData).then(res =>-->
+<!--if (res.code === 200)-->
+<!--console.log(res.data);-->
+</div>
+
+<!--<input id="v_file" type="button" onclick="play()"/>-->
+<!--<button onclick="play()">上传视频</button>-->
+<!--<video id="video" controls="controls" width="2500px" height="1340" class="vp">-->
+<!--    你的浏览器貌似不支持video 元素 %>_<%-->
+<!--    <source src="/vedio/first~1.mp4" controls width="2500" height="1336" class="vp">>-->
+<!--</video>#}-->
+
+<!--<video controls width="2500" height="1336" class="vp">#}-->
+<!--    <source src = "/video/first~1.mp4"; type="video">#}-->
+<!--  <p>你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>#}-->
+<!--</video>#}-->
+<table align="center" width="1500" height="100" border="1" cellspacing="0" class="tb">
+    <tr>
+<!--        <th>图片名称</th>-->
+        <th>出现的车牌号</th>
+    </tr>
+    <tr>
+        <th>{{car_id1}}</th>
+    </tr>
+  </table>
+</body>
+</html>
+
+<!--<script>-->
+<!--    function appendTableData(table, data) {-->
+<!--    for (let element of data) {-->
+<!--      let row = table.insertRow();-->
+<!--      for (key in element) {-->
+<!--        let cell = row.insertCell();-->
+<!--        let text = document.createTextNode(element[key]);-->
+<!--        cell.appendChild(text);-->
+<!--      }-->
+<!--    }-->
+<!--  }-->
+<!--</script>-->
+<!--<script>-->
+<!--    function play(){-->
+<!--        var file = document.getElementById('vedio').files[0];-->
+<!--        var url = URL.createObjectURL(file);-->
+<!--        console.log(url);-->
+<!--      	document.querySelector('#video').src = url;-->
+<!--    }-->
+
+<!--</script>-->
